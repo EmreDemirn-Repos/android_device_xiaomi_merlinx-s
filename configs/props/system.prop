@@ -107,3 +107,11 @@ ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
+
+# RIL Powersaving
+persist.radio.add_power_save=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
+ro.mot.eri.losalert.delay=1000
