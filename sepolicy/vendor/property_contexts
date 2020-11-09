@@ -23,5 +23,8 @@ ro.mtk_perf_fast_start_win             u:object_r:vendor_mtk_video_prop:s0
 ro.mtk_crossmount_support      u:object_r:vendor_mtk_video_prop:s0
 ro.mtk_deinterlace_support     u:object_r:vendor_mtk_video_prop:s0
 
+# PowerHAL
+vendor.mediatek.powerhal.rendering  u:object_r:vendor_power_prop:s0
+
 # Thermal
 vendor.sys.thermal.     				u:object_r:vendor_thermal_engine_prop:s0
