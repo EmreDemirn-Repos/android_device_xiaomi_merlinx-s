@@ -59,6 +59,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_CMDLINE += nodebugmon
 
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_xiaomi_mt6768)
