@@ -98,9 +98,6 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor
 
 PRODUCT_PACKAGES += \
-    libutils-v32
-
-PRODUCT_PACKAGES += \
     libbase_shim
 
 PRODUCT_PACKAGES += \
@@ -515,6 +512,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libunwindstack.vendor \
     libutilscallstack.vendor
+    libutils-v32
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
