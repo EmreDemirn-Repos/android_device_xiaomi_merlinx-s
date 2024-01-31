@@ -217,18 +217,18 @@ PRODUCT_PACKAGES += \
     libutils.vendor \
     libhwbinder.vendor
 
-# IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
-
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
+# IMS
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/permissions/mediatek-common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-common.xml \
+    $(COMMON_PATH)/configs/permissions/mediatek-framework.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-framework.xml \
+    $(COMMON_PATH)/configs/permissions/mediatek-ims-base.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-ims-base.xml \
+    $(COMMON_PATH)/configs/permissions/mediatek-ims-common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-ims-common.xml \
+    $(COMMON_PATH)/configs/permissions/mediatek-telecom-common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-telecom-common.xml \
+    $(COMMON_PATH)/configs/permissions/mediatek-telephony-base.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-telephony-base.xml \
+    $(COMMON_PATH)/configs/permissions/mediatek-telephony-common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-telephony-common.xml
 
 # Init
 PRODUCT_PACKAGES += \
