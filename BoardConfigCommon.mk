@@ -62,6 +62,7 @@ BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += nodebugmon
 BOARD_KERNEL_CMDLINE += noirqdebug
 BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket
+BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_xiaomi_mt6768)
