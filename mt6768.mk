@@ -187,6 +187,14 @@ PRODUCT_PACKAGES += \
     android.hardware.health-V1-ndk \
     android.hardware.health@2.0
 
+# Disable async MTE on a few process
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.arm64.memtag.system_server=off \
+    persist.arm64.memtag.app.com.android.se=off \
+    persist.arm64.memtag.app.com.google.android.bluetooth=off \
+    persist.arm64.memtag.app.com.android.nfc=off \
+    persist.arm64.memtag.process.system_server=off
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
