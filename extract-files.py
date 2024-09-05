@@ -13,6 +13,12 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'hardware/mediatek',
+    'hardware/xiaomi',
+    'vendor/xiaomi/merlinx'
+]
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/bin/mnld': blob_fixup()
         .add_needed('libshim_sensors.so'),
@@ -28,6 +34,7 @@ module = ExtractUtilsModule(
     'merlinx',
     'xiaomi',
     blob_fixups=blob_fixups,
+    namespace_imports=namespace_imports,
     add_firmware_proprietary_file=True,
 )
 
