@@ -13,6 +13,13 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'hardware/mediatek',
+    'hardware/xiaomi',
+    'device/xiaomi/merlinx',
+    'vendor/xiaomi/merlinx'
+]
+
 blob_fixups: blob_fixups_user_type = {
     ('vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so', 'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so', 'vendor/lib/hw/android.hardware.thermal@2.0-impl.so', 'vendor/lib64/hw/android.hardware.thermal@2.0-impl.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
@@ -109,6 +116,7 @@ module = ExtractUtilsModule(
     'merlinx',
     'xiaomi',
     blob_fixups=blob_fixups,
+    namespace_imports=namespace_imports,
     add_firmware_proprietary_file=True,
 )
 
