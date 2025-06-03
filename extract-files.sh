@@ -77,7 +77,10 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2-v34.so" "${2}"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so)
+	vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml)
+	    sed -i 's/1.1/1.2/' "$2"
+            ;;
+	vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
         vendor/lib64/libwifi-hal-mtk.so)
