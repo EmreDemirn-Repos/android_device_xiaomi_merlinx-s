@@ -120,6 +120,11 @@ blob_fixups: blob_fixups_user_type = {
 	.replace_needed('android.hardware.power-V2-ndk_platform', 'android.hardware.power-V2-ndk.so'),
     'vendor/bin/factory': blob_fixup()
         .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
+    'vendor/bin/hw/camerahalserver': blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
+        .replace_needed('libbinder.so', 'libbinder-v32.so')
+        .replace_needed('libhidltransport.so', 'libhidlbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
