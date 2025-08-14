@@ -28,7 +28,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
@@ -75,8 +74,11 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth-service.mediatek \
+    android.hardware.bluetooth.audio-impl
+
+
+
 
 # Camera
 PRODUCT_PACKAGES += \
