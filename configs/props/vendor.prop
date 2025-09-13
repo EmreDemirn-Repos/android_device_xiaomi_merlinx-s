@@ -94,6 +94,7 @@ debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_gl_backpressure=0
 debug.sf.enable_hwc_vds=0
+debug.sf.enable_egl_image_tracker=0
 persist.vendor.sys.mtkaal.function=0
 
 # FM Radio
