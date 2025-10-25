@@ -493,6 +493,9 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio-service.compat
+
+PRODUCT_PACKAGES += \
     android.hardware.radio@1.0.vendor \
     android.hardware.radio@1.1.vendor \
     android.hardware.radio@1.2.vendor \
