@@ -15,6 +15,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/lib/librt_extamp_intf.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libtinyxml.so" "libtinyxml2-v34.so" "${2}"
+            ;;
         *)
             return 1
             ;;
