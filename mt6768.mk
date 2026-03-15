@@ -6,6 +6,8 @@
 
 COMMON_PATH := device/xiaomi/mt6768-common
 
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
