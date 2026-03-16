@@ -100,6 +100,9 @@ PRODUCT_PACKAGES += \
     libutils-v32
 
 PRODUCT_PACKAGES += \
+    libbase_shim
+
+PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
     libexif.vendor
 
