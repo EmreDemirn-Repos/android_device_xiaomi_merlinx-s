@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinycompress \
     libtinyxml \
+    libtinyxml2-v34 \
     tinymix \
     libldacBT_bco
 
