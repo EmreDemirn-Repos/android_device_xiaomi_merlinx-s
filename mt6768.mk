@@ -338,7 +338,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
 PRODUCT_PACKAGES += \
-    libui-v32
+    libui-v32 \
+    libui-v34
 
 # USB
 PRODUCT_PACKAGES += \
