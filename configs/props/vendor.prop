@@ -91,6 +91,7 @@ persist.vendor.max.brightness=448
 ro.vendor.colorpick_adjust=true
 ro.vendor.cabc.enable=true
 debug.sf.auto_latch_unsignaled=0
+debug.sf.disable_backpressure=1
 persist.vendor.sys.mtkaal.function=0
 
 # FM Radio
