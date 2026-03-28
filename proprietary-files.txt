@@ -288,6 +288,8 @@ vendor/bin/mnld
 
 # Misc
 vendor/lib64/lib_misd.so
+vendor/lib64/libimsg_log.so
+vendor/lib/libimsg_log.so
 
 # TEE (Trusted Execution Environment)
 vendor/bin/teei_daemon
