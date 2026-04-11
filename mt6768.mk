@@ -268,7 +268,7 @@ PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
 # Always preopt extracted APKs to prevent extracting out of the APK for gms
 # modules.
