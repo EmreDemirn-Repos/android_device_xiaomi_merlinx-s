@@ -298,6 +298,7 @@ PRODUCT_PACKAGES += \
     libsoft_attestation_cert.vendor \
     libnetutils.vendor
 
+PERF_ANIM_OVERRIDE := true
 
 # UFFD GC
 PRODUCT_ENABLE_UFFD_GC := true
