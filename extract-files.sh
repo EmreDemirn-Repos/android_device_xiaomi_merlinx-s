@@ -66,10 +66,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        lib64/libshowlogo.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --add-needed "libshim_showlogo.so" "${2}"
-            ;;
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so|\
         vendor/lib*/hw/android.hardware.thermal@2.0-impl.so|\
             [ "$2" = "" ] && return 0
@@ -134,11 +130,77 @@ function blob_fixup() {
             ;;
 	vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             "${PATCHELF}" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.0.so" "libcodec2_hidl@1.0-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.1.so" "libcodec2_hidl@1.1-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.2.so" "libcodec2_hidl@1.2-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
+        vendor/lib64/libcodec2_hidl@1.0-v31.so
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libstagefright_bufferqueue_helper.so" "libstagefright_bufferqueue_helper-v33.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl_plugin.so" "libcodec2_hidl_plugin-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
+        vendor/lib64/libcodec2_hidl@1.1-v31.so
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libstagefright_bufferqueue_helper.so" "libstagefright_bufferqueue_helper-v33.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.0.so" "libcodec2_hidl@1.0-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl_plugin.so" "libcodec2_hidl_plugin-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
+        vendor/lib64/libcodec2_hidl@1.2-v31.so
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libstagefright_bufferqueue_helper.so" "libstagefright_bufferqueue_helper-v33.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.0.so" "libcodec2_hidl@1.0-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.1.so" "libcodec2_hidl@1.1-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl_plugin.so" "libcodec2_hidl_plugin-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
+        vendor/lib64/libcodec2_hidl_plugin-v31.so
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            ;;
+        vendor/lib64/libcodec2_mtk_c2store.so|\
+	vendor/lib64/libcodec2_vpp_qt_plugin.so|\
+        vendor/lib64/libcodec2_vpp_rs_plugin.so)
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libcodec2_soft_common.so" "libcodec2_soft_common-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            "${PATCHELF}" --replace-needed "libsfplugin_ccodec_utils.so" "libsfplugin_ccodec_utils-v31.so" "${2}"
+            ;;
+	vendor/lib64/libcodec2_mtk_vdec.so|\
+	vendor/lib64/libcodec2_mtk_venc.so)
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libcodec2_soft_common.so" "libcodec2_soft_common-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            "${PATCHELF}" --replace-needed "libsfplugin_ccodec_utils.so" "libsfplugin_ccodec_utils-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            ;;
+	vendor/lib64/libcodec2_soft_common-v31.so
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            "${PATCHELF}" --replace-needed "libsfplugin_ccodec_utils.so" "libsfplugin_ccodec_utils-v31.so" "${2}"
+            ;;
+	vendor/lib64/libcodec2_vndk-v31.so
+            [ -z "$2" ] && return 0
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;
+	vendor/lib64/libsfplugin_ccodec_utils-v31.so
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk-v31.so" "${2}"
             ;;
         vendor/lib64/libmtkcam_grallocutils.so | vendor/lib64/libmtkisp_metadata.so)
-
             "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
             ;;
 	vendor/bin/mnld)
