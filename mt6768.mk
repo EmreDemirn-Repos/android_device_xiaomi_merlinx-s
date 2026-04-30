@@ -531,6 +531,10 @@ TARGET_INCLUDES_LOS_PREBUILTS := true
 
 PRODUCT_NO_CAMERA := false
 
+PERF_GOV_SUPPORTED := true
+
+PERF_DEFAULT_GOV := schedutil
+
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
