@@ -49,7 +49,6 @@ public class Startup extends BroadcastReceiver {
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
                 Log.d(TAG, "Applying saved settings...");
                 applySavedSaturation(context);
-                applyAutoHbmSettings(context);
             }, 5000); // Delay of 5 seconds
         }
     }
@@ -88,23 +87,5 @@ public class Startup extends BroadcastReceiver {
         } else {
             Log.e(TAG, "SurfaceFlinger service not found");
         }
-    }
-
-    private void applyAutoHbmSettings(Context context) {
-        Log.d(TAG, "Applying Auto HBM settings...");
-        AutoHbmFragment.toggleAutoHbmService(context);
-
-        ComponentUtils.toggleComponent(
-                context,
-                AutoHbmActivity.class,
-                true
-        );
-
-        ComponentUtils.toggleComponent(
-                context,
-                AutoHbmTileService.class,
-                true
-        );
-        Log.d(TAG, "Auto HBM settings applied");
     }
 }

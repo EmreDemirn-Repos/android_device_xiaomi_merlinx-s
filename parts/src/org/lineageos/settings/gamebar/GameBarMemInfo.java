@@ -62,3 +62,4 @@ public class GameBarMemInfo {
             return 0;
         }
     }
+}

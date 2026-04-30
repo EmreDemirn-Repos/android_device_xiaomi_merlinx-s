@@ -60,6 +60,7 @@
             android:title="GPU Clock Speed"
             android:summary="Show current GPU clock frequency"
             android:defaultValue="false" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="FPS Measurement Method"
