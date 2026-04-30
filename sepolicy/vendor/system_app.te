@@ -12,6 +12,8 @@ allow system_app vendor_sysfs_bms_supply:dir search;
 
 # Thermal
 allow system_app sysfs_therm:dir search;
+allow system_app sysfs_therm:file write;
+allow system_app sysfs_therm:file { getattr open read };
 allow system_app sysfs_thermal:file { rw_file_perms getattr };
 
 allow system_app vendor_sysfs_battery_supply:dir search;
