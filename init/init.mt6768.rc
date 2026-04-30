@@ -690,6 +690,10 @@ on zygote-start
 on early-boot
     write /proc/bootprof "INIT:early-boot"
 
+    # Dolby
+    mkdir /data/vendor/dolby 0770 media media
+    mkdir /data/vendor/multimedia 0775 system system
+
 on boot
     write /proc/bootprof "INIT:boot"
 

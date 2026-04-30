@@ -188,7 +188,7 @@ TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 # VINTF
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
 $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml
 

@@ -506,5 +506,8 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6768-common/mt6768-common-vendor.mk)
