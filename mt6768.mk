@@ -303,6 +303,10 @@ PERF_ANIM_OVERRIDE := true
 # UFFD GC
 PRODUCT_ENABLE_UFFD_GC := true
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.mt6768
