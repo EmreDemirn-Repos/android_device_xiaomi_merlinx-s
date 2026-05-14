@@ -347,6 +347,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libui-v32 \
+    android.hardware.graphics.common-V2-ndk_platform \
+    android.hardware.common-V2-ndk_platform \
     libui-v34
 
 # USB
