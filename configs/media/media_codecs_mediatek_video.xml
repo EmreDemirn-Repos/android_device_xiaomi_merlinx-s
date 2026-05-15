@@ -117,7 +117,7 @@ Only the three quirks included above are recognized at this point:
             <Feature name="adaptive-playback"/>
             <Feature name="can-swap-width-height"/>
             <Limit name="concurrent-instances" max="16" />
-            <Limit name="performance-point-1920x1088" value="30" />
+            <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="OMX.MTK.VIDEO.DECODER.AVC.secure" type="video/avc" >
             <Limit name="size" min="64x64" max="2048x1088" />
@@ -127,7 +127,7 @@ Only the three quirks included above are recognized at this point:
             <Feature name="adaptive-playback"/>
             <Feature name="can-swap-width-height"/>
             <Limit name="concurrent-instances" max="1" />
-            <Limit name="performance-point-1920x1088" value="30" />
+            <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="OMX.MTK.VIDEO.DECODER.VPX" type="video/x-vnd.on2.vp8" >
             <Limit name="size" min="16x16" max="1920x1088" />
@@ -135,7 +135,7 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="requires-allocate-on-output-ports" />
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="16" />
-            <Limit name="performance-point-1920x1088" value="30" />
+            <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="OMX.MTK.VIDEO.DECODER.XVID" type="video/xvid" >
             <Limit name="size" min="16x16" max="1920x1088" />
