@@ -1,1 +1,3 @@
 vendor_restricted_prop(vendor_fingerprint_prop);
+vendor_restricted_prop(vendor_mtk_video_prop);
+typeattribute vendor_mtk_video_prop                  mtk_core_property_type;
