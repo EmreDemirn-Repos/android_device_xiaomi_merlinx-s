@@ -18,8 +18,12 @@ ro.fm.fake_chan_3=10750 -205
 # LMKD
 ro.lmk.use_psi=true
 ro.lmk.use_minfree_levels=false
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
+ro.lmk.kill_heaviest_task=false
+ro.lmk.kill_timeout_ms=1000
+ro.lmk.psi_partial_stall_ms=200
+ro.lmk.psi_complete_stall_ms=700
+ro.lmk.thrashing_limit=80
+ro.lmk.thrashing_limit_decay=10
 
 # eBPF
 ro.bpf.kver_override=5.10.247
