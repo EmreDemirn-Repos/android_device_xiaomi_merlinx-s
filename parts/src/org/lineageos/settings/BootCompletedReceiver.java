@@ -54,7 +54,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static void onLockedBootCompleted(Context context) {
             ThermalUtils.startService(context);
             overrideHdrTypes(context);
-            SoundControlUtils.applyAll(context);
     }
 
     private static void overrideHdrTypes(Context context) {
