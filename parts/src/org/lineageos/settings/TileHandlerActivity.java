@@ -28,18 +28,12 @@ import android.util.Log;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.lineageos.settings.gamebar.GameBarSettingsActivity;
-import org.lineageos.settings.gamebar.GameBarTileService;
 
 public final class TileHandlerActivity extends Activity {
     private static final String TAG = "TileHandlerActivity";
 
     // Map QS Tile services to their corresponding activity
     private static final Map<String, Class<?>> TILE_ACTIVITY_MAP = new HashMap<>();
-
-    static {
-        TILE_ACTIVITY_MAP.put(GameBarTileService.class.getName(), GameBarSettingsActivity.class);
-    }
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
