@@ -70,7 +70,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libshim_showlogo.so" "${2}"
             ;;
-        vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so | vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
+        vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so|\
+        vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so|\
+        vendor/lib*/hw/android.hardware.thermal@2.0-impl.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
