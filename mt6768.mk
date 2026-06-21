@@ -345,6 +345,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.mt6768
 
+# Use proprietary Xiaomi USB gadget init instead of common MediaTek one
+$(call soong_config_set_bool,mediatek_gadget,use_custom_usb_gadget_rc,true)
+
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay-lineage \
