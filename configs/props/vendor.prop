@@ -37,6 +37,12 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 ro.vendor.mtk.bt_sap_enable=true
 
+# Blurs
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+ro.launcher.blur.appLaunch=0
+persist.sys.sf.disable_blurs=0
+
 # Camera
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=0
