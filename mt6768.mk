@@ -129,7 +129,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0.vendor \
     android.hardware.drm@1.1.vendor \
     android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4.vendor
 
 # Disable SF configstore
 PRODUCT_PACKAGES += \
@@ -140,7 +141,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek
+    android.hardware.memtrack-service.mediatek \
+    android.hardware.memtrack-V1-ndk_platform.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common@1.2.vendor \

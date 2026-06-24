@@ -464,6 +464,7 @@ vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqparamparser.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
+vendor/lib64/android.hardware.memtrack-V1-ndk_platform.so
 
 # Fingerprint
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so;FIX_SONAME
@@ -549,6 +550,7 @@ vendor/lib64/libcharon-ss.so
 vendor/lib64/libDR.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
+vendor/lib64/android.hardware.gnss-V1-ndk_platform.so
 
 # GPS (Configs)
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
