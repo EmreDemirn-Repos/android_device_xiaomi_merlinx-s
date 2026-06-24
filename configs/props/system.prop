@@ -30,11 +30,7 @@ ro.charger.enable_suspend=true
 
 # Display
 config.svi.path=/system/etc/SVIConfig.xml
-debug.svi.logs=1
-debug.als.logs=1
 debug.hwui.trace_gpu_resources=false
-config.svi.xml=1
-config.svi.xml.print=1
 persist.sys.brightness.low.gamma=true
 
 # FM Radio
@@ -63,14 +59,6 @@ persist.sys.mdlog_dumpback=2
 
 # MIUI
 persist.miui.extm.enable=1
-
-# Media
-debug.stagefright.c2inputsurface=-1
-
-# Perf
-ro.mtk_perf_simple_start_win=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
 
 # RIL
 ro.telephony.sim.count=2

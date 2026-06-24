@@ -128,9 +128,8 @@ vendor.display.svi.config_path=/system/etc/SVIConfig.xml
 persist.vendor.max.brightness=448
 ro.vendor.colorpick_adjust=true
 ro.vendor.cabc.enable=true
-debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_backpressure=1
-debug.sf.enable_gl_backpressure=0
+debug.sf.enable_gl_backpressure=1
 debug.sf.enable_hwc_vds=0
 debug.sf.enable_egl_image_tracker=0
 persist.vendor.sys.mtkaal.function=0
@@ -146,7 +145,7 @@ ro.vendor.mtk_wapi_support=1
 ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
-ro.vendor.mtk_log_hide_gps=0
+ro.vendor.mtk_log_hide_gps=1
 
 # HWUI
 debug.hwui.use_hint_manager=true
@@ -165,7 +164,6 @@ persist.vendor.viwifi_support=0
 
 # MIUI
 sys.fp.miui.token=0
-persist.sys.mms.compact_enable=true
 persist.sys.spc.enabled=true
 persist.sys.use_mi_new_strategy=true
 persist.sys.mmms.switch=true
@@ -248,7 +246,7 @@ persist.vendor.radio.mtk_dsbp_support=2
 persist.vendor.mtk_ct_volte_support=3
 persist.vendor.radio.mtk_ps2_rat=L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
-persist.vendor.log.tel_log_ctrl=1
+persist.vendor.log.tel_log_ctrl=0
 ro.vendor.mtk_data_config=1
 ro.vendor.mtk_embms_support=1
 persist.vendor.mtk_sim_switch_policy=2
@@ -286,17 +284,9 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=false
 ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.enable_layer_caching=true
 debug.sf.layer_caching_active_layer_timeout_ms=1000
-debug.sf.use_phase_offsets_as_durations=1
 ro.opengles.version=196610
-debug.sf.late.sf.duration=27600000
-debug.sf.late.app.duration=16500000
-debug.sf.early.sf.duration=27600000
-debug.sf.early.app.duration=16500000
-debug.sf.earlyGl.sf.duration=27600000
-debug.sf.earlyGl.app.duration=20000000
-debug.sf.hwc.min.duration=18000000
 debug.sf.enable_transaction_tracing=false
-debug.sf.predict_hwc_composition_strategy=0
+debug.sf.disable_client_composition_cache=1
 debug.sf.treat_170m_as_sRGB=1
 
 # TEE
@@ -318,7 +308,7 @@ vendor.connsys.driver.ready=no
 ro.vendor.mtk_wfd_support=1
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m
-ro.vendor.connsys.dedicated.log=1
+ro.vendor.connsys.dedicated.log=0
 persist.vendor.vzw_device_type=0
 persist.vendor.wfc.sys_wfc_support=1
 
