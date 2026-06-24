@@ -514,7 +514,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libunwindstack.vendor \
-    libutilscallstack.vendor
+    libutilscallstack.vendor \
     libutils-v32
 
 # Wi-Fi
