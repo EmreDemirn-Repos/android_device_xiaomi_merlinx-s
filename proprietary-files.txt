@@ -254,7 +254,7 @@ vendor/etc/camera/mibokeh_mt6768_parameter.bin
 vendor/etc/init/camerahalserver.rc
 vendor/etc/sceneDetection.xml
 vendor/lib/libcam.halsensor.hwintegration.so
-vendor/lib/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
+vendor/lib/mt6768/libmtk_drvb.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
 vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/lib3a.ae.core.so
@@ -329,7 +329,7 @@ vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmibokeh_mt6768.so
 vendor/lib64/libmpbase.so
-vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
+vendor/lib64/mt6768/libmtk_drvb.so
 vendor/lib64/libmtkcam.eventcallback.so
 vendor/lib64/libmtkcam.featurepipe.vsdof_util.so
 vendor/lib64/libmtkcam_3rdparty.core.so
@@ -406,7 +406,7 @@ vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vpud.rc
 -vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib/egl/egl.cfg
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6768.so
+vendor/lib/egl/libGLES_mali.so
 vendor/lib/egl/libGLES_meow.so|b2f0f67bc43277061214d013d86e1dcfc138702bf6e9a9f48f70762d058c8801
 vendor/lib/egl/libMEOW_data.so
 vendor/lib/egl/libMEOW_gift.so
@@ -419,8 +419,8 @@ vendor/lib/libDefaultFpsActor.so
 vendor/lib/libFrameRecord.so
 vendor/lib/libNoFpsActor.so
 vendor/lib/libOpenCL.so
-vendor/lib/mt6768/libdpframework.so;SYMLINK=vendor/lib/libdpframework.so
-vendor/lib/mt6768/libnir_neon_driver.so;SYMLINK=vendor/lib/libnir_neon_driver.so
+vendor/lib/mt6768/libdpframework.so
+vendor/lib/mt6768/libnir_neon_driver.so
 vendor/lib/libged.so
 vendor/lib/libgpu_aux.so
 vendor/lib/libgpud.so
@@ -432,7 +432,7 @@ vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
 vendor/lib/libpqframework.so
 vendor/lib/libvpud_vcodec.so|8b2fa5733db250ebab04b3c3ee2edf9f189dbf5777875c9d675579448e96e35e
-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6768.so
+vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so|28a21d1787d76facfffa9ef50cd54dd98d0404d3b3102afb2ab5bbbd1f3e307b
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -447,8 +447,8 @@ vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/mt6768/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
-vendor/lib64/mt6768/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
+vendor/lib64/mt6768/libdpframework.so
+vendor/lib64/mt6768/libnir_neon_driver.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
@@ -571,9 +571,9 @@ vendor/etc/slp_conf
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.beanpod.so
-vendor/lib/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.default.so
+vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib64/hw/gatekeeper.beanpod.so
-vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
+vendor/lib64/hw/libSoftGatekeeper.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
@@ -599,8 +599,7 @@ vendor/lib64/wechat.beanpod.so
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so
-vendor/lib/mt6768/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so
-vendor/lib/libpq_cust_base.so
+vendor/lib/mt6768/libpq_prot.so
 vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.10.so
@@ -616,8 +615,7 @@ vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so
-vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
-vendor/lib64/libpq_cust_base.so
+vendor/lib64/mt6768/libpq_prot.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
