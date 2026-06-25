@@ -1,4 +1,4 @@
-# Unpinned blobs from merlin-user 12 SP1A.210812.016 V13.0.2.0.SJOMIXM release-keys
+# Unpinned blobs from merlin-user 12 SP1A.210812.016 V14.0.0.1.SJOCNXM release-keys
 
 # AAL
 vendor/lib/libaal_cust.so
@@ -273,7 +273,9 @@ vendor/lib64/libst_sr_models.so
 vendor/bin/volte_imcb
 vendor/bin/volte_ua
 vendor/lib/libverno.so
+vendor/lib/libimsg_log.so
 vendor/lib64/libverno.so
+vendor/lib64/libimsg_log.so
 
 # Rootdir
 vendor/bin/factory
