@@ -65,8 +65,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_PACKAGES += \
-    libcamera_metadata_shim \
-    libbinder-v32.vendor
+    libcamera_metadata_shim
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

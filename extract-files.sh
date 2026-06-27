@@ -29,7 +29,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
-            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v32.so" "${2}"
             ;;
         *)
             return 1
