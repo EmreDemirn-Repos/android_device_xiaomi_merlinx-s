@@ -380,8 +380,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libui-v32 \
-    libui-v34
-    
+    libui-v34 \
+    libhidlbase-v32.vendor
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
