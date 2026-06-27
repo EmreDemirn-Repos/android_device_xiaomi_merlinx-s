@@ -66,7 +66,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim \
-    libpiex_shim
+    libpiex_shim \
+    libbinder-v32.vendor
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
