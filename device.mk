@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_PACKAGES += \
-    libcamera_metadata_shim
+    libcamera_metadata_shim \
+    libpiex_shim
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

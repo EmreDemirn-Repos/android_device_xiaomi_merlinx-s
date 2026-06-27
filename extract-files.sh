@@ -30,6 +30,10 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
+	vendor/lib64/libmi_watermark.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
