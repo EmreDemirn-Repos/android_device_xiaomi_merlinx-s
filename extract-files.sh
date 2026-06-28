@@ -14,7 +14,8 @@ function blob_fixup() {
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
-            "$PATCHELF" --add-needed "libcamera_metadata_shim.so" "$2"
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            "$PATCHELF" --add-needed "libbinder-v32.so" "$2"
             ;;
         vendor/lib/librt_extamp_intf.so)
             [ "$2" = "" ] && return 0
