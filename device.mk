@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim \
     libpiex_shim \
-    libbinder-v32 \
     libhidlbase_shim
 
 # Soong
