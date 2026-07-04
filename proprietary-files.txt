@@ -103,7 +103,6 @@ vendor/lib64/libaltek_ldc_preview.so
 vendor/lib64/libarcsoft_facebeauty.so
 vendor/lib64/libarcsoft_hdr.so
 vendor/lib64/libarcsoft_super_night.so
-vendor/lib64/libarcsoft_supernight.so
 vendor/lib64/libcam.feature_utils.so
 vendor/lib64/libcam.hal3a.log.so
 vendor/lib64/libcam.hal3a.v3.dng.so
@@ -274,9 +273,7 @@ vendor/lib64/libst_sr_models.so
 vendor/bin/volte_imcb
 vendor/bin/volte_ua
 vendor/lib/libverno.so
-vendor/lib/libimsg_log.so
 vendor/lib64/libverno.so
-vendor/lib64/libimsg_log.so
 
 # Rootdir
 vendor/bin/factory
