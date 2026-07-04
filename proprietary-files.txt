@@ -251,6 +251,7 @@ vendor/lib64/hw/sensors.mt6768.so
 vendor/lib64/lib_bsscore.so
 vendor/lib64/libakm.so
 vendor/lib64/libsensor_custom.so
+vendor/lib64/libbinder-v32.so|96d8ed166d363097ee5937624d57b4b5ee345b1d
 
 # Thermal
 vendor/etc/thermal-camera.conf

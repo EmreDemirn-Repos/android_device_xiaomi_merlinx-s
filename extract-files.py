@@ -23,11 +23,21 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/mnld': blob_fixup()
         .add_needed('libshim_sensors.so'),
     'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
-        .replace_needed('libutils.so', 'libutils-v32.so'),
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
+	.add_needed('libbinder-v32.so'),
     'vendor/lib/librt_extamp_intf.so': blob_fixup()
 	.replace_needed('libtinyxml.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libcam.hal3a.v3.so': blob_fixup()
-	.replace_needed('libui.so', 'libui-v34.so'),
+	.replace_needed('libui.so', 'libui-v34.so')
+	.replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
+    'vendor/bin/hw/camerahalserver': blob_fixup()
+	.replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
+        .replace_needed('libbinder.so', 'libbinder-v32.so')
+        .replace_needed('libhidltransport.so', 'libhidlbase_shim.so'),
+    'vendor/lib64/libmi_watermark.so': blob_fixup()
+	.add_needed('libpiex_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
@@ -35,7 +45,7 @@ module = ExtractUtilsModule(
     'xiaomi',
     blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=True,
+    add_firmware_proprietary_file=False,
 )
 
 if __name__ == '__main__':

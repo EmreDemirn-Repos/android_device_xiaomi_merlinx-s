@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2.vendor
 
+PRODUCT_PACKAGES += \
+    libpiex_shim \
+    libhidlbase_shim
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
