@@ -230,7 +230,7 @@ vendor/etc/sn100u_pnx_sst.pnscr
 
 # Graphics
 vendor/lib/libpq_cust.so
-vendor/lib/libvcodecdrv.so|5f450e18859d8721842dfa248197447a3e39c03f90c484b8327d7bfc5bf80edc
+vendor/lib/libvcodecdrv.so
 vendor/lib64/libacdk.so
 vendor/lib64/libpq_cust.so
 
