@@ -17,7 +17,8 @@ namespace_imports = [
     'hardware/mediatek',
     'hardware/xiaomi',
     'device/xiaomi/merlinx',
-    'vendor/xiaomi/merlinx'
+    'vendor/xiaomi/merlinx',
+    'hardware/mediatek/libmtkperf_client'
 ]
 
 blob_fixups: blob_fixups_user_type = {
@@ -38,7 +39,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmi_watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     ('vendor/lib/libwvhidl.so', 'vendor/lib64/libwvhidl.so', 'vendor/lib/mediadrm/libwvdrmengine.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
-	.replace_needed('libprotobuf-cpp-lite-3.9.1', 'libprotobuf-cpp-lite-3.9.1-v31')
+	.replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-lite-3.9.1-v31.so')
         .add_needed('libcrypto_shim.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
 	.add_needed('libutils-v32.so'),
