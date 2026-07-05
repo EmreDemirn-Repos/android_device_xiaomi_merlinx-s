@@ -1,4 +1,4 @@
-# Unpinned blobs from lancelot-user 12 SP1A.210812.016 V13.0.4.0.SJCMIXM release-keys
+# Unpinned blobs from merlin-user 12 SP1A.210812.016 V14.0.0.1.SJOCNXM release-keys
 
 # AEE
 vendor/lib/libaedv.so

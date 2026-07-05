@@ -125,7 +125,7 @@ module = ExtractUtilsModule(
     'xiaomi',
     blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=True,
+    add_firmware_proprietary_file=False,
 )
 
 if __name__ == '__main__':
