@@ -110,6 +110,14 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcam.hal3a.v3.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so')
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
+    'vendor/bin/hw/android.hardware.gnss-service.mediatek': blob_fixup()
+	.replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
+    'vendor/bin/hw/android.hardware.memtrack-service.mediatek': blob_fixup()
+	.replace_needed('android.hardware.memtrack-V1-ndk_platform.so', 'android.hardware.memtrack-V1-ndk.so'),
+    'vendor/lib64/android.hardware.power-service-mediatek.so': blob_fixup()
+	.replace_needed('android.hardware.power-V2-ndk_platform', 'android.hardware.power-V2-ndk.so'),
+    'vendor/bin/factory': blob_fixup()
+        .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

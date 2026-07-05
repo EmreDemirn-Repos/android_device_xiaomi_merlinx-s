@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek \
-    android.hardware.memtrack-V1-ndk_platform
+    android.hardware.memtrack-V1-ndk
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common@1.2.vendor \
@@ -188,7 +188,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss-V1-ndk_platform
+    android.hardware.gnss-V1-ndk
 
 PRODUCT_PACKAGES += \
     libcurl.vendor
@@ -523,7 +523,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_sensors \
     libsensorndkbridge \
-    libpower.vendor
+    libpower.vendor \
+    android.hardware.power-V2-ndk.vendor
 
 # Shims
 PRODUCT_PACKAGES += \
