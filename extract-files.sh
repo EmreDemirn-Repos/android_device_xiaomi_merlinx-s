@@ -117,13 +117,29 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libutils-v32.so" "${2}"
             ;;
         vendor/lib/libnvram.so | vendor/lib/libsysenv.so | vendor/lib64/libnvram.so | vendor/lib64/libsysenv.so)
-       [ "$2" = "" ] && return 0
+            [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
-         vendor/lib64/libmtkcam_grallocutils.so | vendor/lib64/libmtkisp_metadata.so)
+        vendor/lib64/libmtkcam_grallocutils.so | vendor/lib64/libmtkisp_metadata.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
             ;;
-        *)
+	vendor/bin/mnld)
+            [ "$2" = "" ] && return 0
+            "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            ;;
+        vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib/librt_extamp_intf.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libtinyxml.so" "libtinyxml2-v34.so" "${2}"
+            ;;
+        vendor/lib64/libcam.hal3a.v3.so | vendor/lib64/libmtkcam_3rdparty.vidhance.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            ;;
+       *)
             return 1
             ;;
     esac

@@ -65,7 +65,7 @@ BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_xiaomi_mt6768)
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_xiaomi_mt6768)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_mt6768
 
 # Kernel
@@ -129,18 +129,18 @@ TARGET_BOARD_PLATFORM := mt6768
 PRODUCT_USES_QCOM_HARDWARE := false
 
 # Properties
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/props/product.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/props/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.mt6768
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6768
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -148,12 +148,27 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Sepolicy
 BOARD_MTK_SEPOLICY_IS_LEGACY := true
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # SPL
 VENDOR_SECURITY_PATCH := 2022-12-01
+
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := merlin,merlinx,merlin_eea,merlinnfc
+
+# Display
+TARGET_SCREEN_DENSITY := 440
+
+# HIDL
+ODM_MANIFEST_SKUS += \
+    merlinnfc
+
+ODM_MANIFEST_MERLINNFC_FILES := $(DEVICE_PATH)/manifest_merlinnfc.xml
+
+# Kernel
+TARGET_KERNEL_CONFIG := merlin_defconfig
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -182,18 +197,18 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor/lineage_health_hal
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor/lineage_health_hal
 endif
 
 # Vibrator
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # VINTF
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
-DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-$(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml
+$(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
 
 # Wi-Fi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -210,4 +225,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
-include vendor/xiaomi/mt6768-common/BoardConfigVendor.mk
+include vendor/xiaomi/merlinx/BoardConfigVendor.mk
