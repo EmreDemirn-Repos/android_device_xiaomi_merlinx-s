@@ -38,6 +38,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmi_watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     ('vendor/lib/libwvhidl.so', 'vendor/lib64/libwvhidl.so', 'vendor/lib/mediadrm/libwvdrmengine.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
+	.replace_needed('libprotobuf-cpp-lite-3.9.1', 'libprotobuf-cpp-lite-3.9.1-v31')
         .add_needed('libcrypto_shim.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
 	.add_needed('libutils-v32.so'),
@@ -110,7 +111,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcam.hal3a.v3.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so')
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
-    'vendor/bin/hw/android.hardware.gnss-service.mediatek': blob_fixup()
+    ('vendor/bin/hw/android.hardware.gnss-service.mediatek', 'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
 	.replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.memtrack-service.mediatek': blob_fixup()
 	.replace_needed('android.hardware.memtrack-V1-ndk_platform.so', 'android.hardware.memtrack-V1-ndk.so'),
