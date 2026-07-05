@@ -10,7 +10,7 @@ import os
 import sys
 from hashlib import sha1
 
-device = 'mt6768-common'
+device = 'merlinx'
 vendor = 'xiaomi'
 
 with open('proprietary-files.txt', 'r') as f:
