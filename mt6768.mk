@@ -540,8 +540,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6768-common/mt6768-common-vendor.mk)
