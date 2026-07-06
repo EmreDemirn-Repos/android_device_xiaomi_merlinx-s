@@ -76,10 +76,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
     android.hardware.bluetooth.audio-impl
-
-
-
-
+    
+# C2 Fixer
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/c2_fix.sh:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/c2_fix.sh \
+    $(LOCAL_PATH)/rootdir/etc/init.c2_fix.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.c2_fix.rc
+    
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \

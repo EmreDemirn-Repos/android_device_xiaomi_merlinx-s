@@ -1,0 +1,13 @@
+service c2_fix /system_ext/bin/c2_fix.sh
+    class main
+    user root
+    group root system log
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start c2_fix
+
+on property:sys.c2_fix.trigger=1
+    restart android-hardware-media-c2-hal-1-2
+    setprop sys.c2_fix.trigger 0

@@ -1,0 +1,9 @@
+type c2_fix, domain, coredomain;
+type c2_fix_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(c2_fix)
+
+allow c2_fix shell_exec:file rx_file_perms;
+allow c2_fix toolbox_exec:file rx_file_perms;
+read_logd(c2_fix)
+set_prop(c2_fix, system_prop)
