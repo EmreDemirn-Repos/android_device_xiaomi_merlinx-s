@@ -908,6 +908,10 @@ vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvpu5.so
 
+# libcodec2_soft_mtk_wmadec - from RMX3430_11_F.23
+vendor/lib/libcodec2_soft_mtk_wmadec.so|2d216b37b7f4e7fe0f0f3389ec26e9036568bc6c
+vendor/lib64/libcodec2_soft_mtk_wmadec.so|21206dbe8841b81277ddcfb033e3ef23fedb4d4a
+
 # StageFright
 vendor/lib/libstagefright_soft_aacdec.so
 vendor/lib/libstagefright_soft_aacenc.so
