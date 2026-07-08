@@ -581,7 +581,7 @@ vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vpud.rc
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib/egl/egl.cfg
-vendor/lib/egl/libGLES_mali.so
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6768.so
 vendor/lib/egl/libGLES_meow.so
 vendor/lib/egl/libMEOW_data.so
 vendor/lib/egl/libMEOW_gift.so
@@ -607,7 +607,7 @@ vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
 vendor/lib/libpqframework.so
 vendor/lib/libvpud_vcodec.so
-vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6768.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -761,9 +761,9 @@ vendor/etc/slp_conf
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.beanpod.so
-vendor/lib/hw/libSoftGatekeeper.so
+vendor/lib/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.default.so
 vendor/lib64/hw/gatekeeper.beanpod.so
-vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
